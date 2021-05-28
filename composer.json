@@ -1,0 +1,22 @@
+{
+    "name": "chipslays/pastly-api",
+    "description": "PHP client for Pastly API.",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "guzzlehttp/guzzle": "^7.3",
+        "chipslays/collection": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pastly\\": "src/"
+        },
+        "files": ["helpers.php"]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "scripts": {
+        "test": "phpunit"
+    }
+}
