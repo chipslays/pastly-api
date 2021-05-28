@@ -16,7 +16,7 @@ use Pastly\Client;
 require 'vendor/autoload.php';
 
 $client = new Client;
-$token = '1234567890:xxxxx-8OI9fjtk3gXhZRJkzQeDGsJxxxxxxxxx_xxx';
+$token = '1622233044:6bCVU-8OI9fjtk3gXhZRJkzQeDGsJNKti2MuBM_n9V';
 
 /** get paste */
 $client->get('example-slug');
