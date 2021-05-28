@@ -1,5 +1,10 @@
 # 🗒 PHP Pastly API Client
 
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/chipslays/pastly-api/tests)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/chipslays/pastly-api)
+![GitHub all releases](https://img.shields.io/github/downloads/chipslays/pastly-api/total)
+![GitHub](https://img.shields.io/github/license/chipslays/pastly-api)
+
 Simple client implementation for [Pastly](https://pastly.chipslays.ru) API.
 
 ## Installation
