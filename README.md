@@ -22,7 +22,6 @@ $token = '1234567890:xxxxx-8OI9fjtk3gXhZRJkzQeDGsJxxxxxxxxx_xxx';
 $client->get('example-slug');
 pastly_get('example-slug');
 
-
 /** create paste */
 $client->create($token, 'Hello, world!');
 pastly_create($token, 'Hello, world!');
