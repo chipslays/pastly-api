@@ -2,13 +2,13 @@
 
 Simple client implementation for [Pastly](https://pastly.chipslays.ru) API.
 
-# Installation
+## Installation
 
 ```bash
 composer require chipslays/pastly-api
 ```
 
-# Usage
+## Usage
 
 ```php
 use Pastly\Client;
@@ -33,11 +33,11 @@ pastly_edit($token, 'example-slug', ['title' => 'New Title']);
 
 More can see in [examples](/examples/) folder.
 
-# Examples
+## Examples
 
 Examples can be found [here](/examples/).
 
-# Tests
+## Tests
 
 ```bash
 composer test
