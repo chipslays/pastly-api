@@ -10,12 +10,12 @@ class Expiration
     /**
      * Paste has no expiration date.
      */
-    protected const NEVER = null;
+    public const NEVER = null;
 
     /**
      * Paste will burn after read.
      */
-    protected const BURN_AFTER_READ = 0;
+    public const BURN_AFTER_READ = 0;
 
     /**
      * Pass a string date like: `+1 day`, `+5 min`, `2021/05/30 15:00` and etc.
