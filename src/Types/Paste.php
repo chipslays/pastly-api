@@ -29,6 +29,11 @@ class Paste
     /**
      * @var int
      */
+    protected $created;
+
+    /**
+     * @var int
+     */
     protected $updated;
 
     /**
@@ -46,15 +51,22 @@ class Paste
      */
     protected $links;
 
+    /**
+     * @var int|null
+     */
+    protected $expiration;
+
     public function __construct(Collection $data)
     {
         $this->paste = $data->get('paste', '');
         $this->title = $data->get('title', '');
         $this->type = $data->get('type', '');
         $this->views = $data->get('views', 0);
+        $this->created = $data->get('created');
         $this->updated = $data->get('updated');
         $this->syntax = $data->get('syntax', '');
         $this->text = $data->get('text', '');
+        $this->expiration = $data->get('expiration', null);
         $this->links = new Link(collection($data->get('links', [])));
     }
 
@@ -99,6 +111,16 @@ class Paste
     }
 
     /**
+     * Get the value of created
+     *
+     * @return int
+     */
+    public function getCreated()
+    {
+        return $this->created;
+    }
+
+    /**
      * Get the value of updated
      *
      * @return int
@@ -136,5 +158,35 @@ class Paste
     public function getLinks()
     {
         return $this->links;
+    }
+
+    /**
+     * Get the value of expiration
+     *
+     * @return int|null
+     */
+    public function getExpiration()
+    {
+        return $this->expiration;
+    }
+
+    /**
+     * Will paste burn after read?
+     *
+     * @return bool
+     */
+    public function isOneTime()
+    {
+        return $this->expiration === 0;
+    }
+
+    /**
+     * Pasta has no expiration date?
+     *
+     * @return bool
+     */
+    public function hasNoTimeLimit()
+    {
+        return $this->expiration === null;
     }
 }

@@ -12,15 +12,16 @@ trait Methods
      * Returns information about the requested paste.
      *
      * @param string $paste Identifier of paste.
-     * @param string|null $password Paste password. Required if paste have password protection.
+     * @param string|null $token If pass the token with which the paste was created, then paste will not be deleted if it is one-time. (Optional).
+     * @param string $password Paste password. Required if paste have password protection.
      * @return Paste
      *
      * @throws RequestException
      */
-    public function get(string $paste, ?string $password = null): Paste
+    public function get(string $paste, ?string $token = null, string $password = null): Paste
     {
         $response = $this->api->post('getPaste', [
-            'json' => $this->prepareRequestData(compact('paste', 'password')),
+            'json' => $this->prepareRequestData(compact('paste', 'token', 'password')),
         ]);
 
         $data = $this->handleResponse($response);
@@ -33,7 +34,7 @@ trait Methods
      *
      * @param string $token Secret token.
      * @param string $text Paste text.
-     * @param array $extra Array with `type`, `title`, `slug`, `syntax`, `password`
+     * @param array $extra Array with `type`, `title`, `slug`, `syntax`, `password`, `expiration`.
      * @return Paste
      *
      * @throws RequestException
@@ -47,6 +48,7 @@ trait Methods
             'slug' => null,
             'type' => 'public',
             'password' => null,
+            'expiration' => null,
         ]
     ): Paste {
         $response = $this->api->post('createPaste', [
