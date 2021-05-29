@@ -36,7 +36,7 @@ $client->edit($token, 'example-slug', ['title' => 'New Title']);
 pastly_edit($token, 'example-slug', ['title' => 'New Title']);
 ```
 
-More can see in [examples](/examples/) folder.
+More code can see in [examples](/examples/) folder.
 
 ## Examples
 
