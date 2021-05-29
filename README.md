@@ -7,6 +7,8 @@
 
 Simple client implementation for [Pastly](https://pastly.chipslays.ru) API.
 
+> **Pastly** - The sexiest pastebin in the Internet.
+
 ## Installation
 
 ```bash
