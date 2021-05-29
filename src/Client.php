@@ -44,7 +44,7 @@ class Client
         $response = json_decode($response->getBody()->getContents(), true);
 
         if ($response['ok'] === false) {
-            throw new RequestException($response['error']);
+            throw new RequestException($response['error'], $response['code'] ?? 501);
         }
 
         return collection($response['result'] ?? []);
