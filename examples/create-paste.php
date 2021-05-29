@@ -1,6 +1,7 @@
 <?php
 
 use Pastly\Client;
+use Pastly\Types\Expiration;
 
 require __DIR__ . '/../vendor/autoload.php';
 
@@ -15,6 +16,14 @@ try {
         'slug' => null,
         'type' => 'public',
         'password' => null,
+        'expiration' => Expiration::until('+5 min'),
+        // 'expiration' => Expiration::until('+6 hour'),
+        // 'expiration' => Expiration::until('+1 day'),
+        // 'expiration' => Expiration::until('+2 week'),
+        // 'expiration' => Expiration::until('+6 month'),
+        // 'expiration' => Expiration::until('+1 year'),
+        // 'expiration' => Expiration::NEVER,
+        // 'expiration' => Expiration::BURN_AFTER_READ,
     ]);
 
     print_r('Title: ' . $paste->getTitle() . PHP_EOL);
