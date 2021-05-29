@@ -7,6 +7,8 @@
 
 Simple client implementation for [Pastly](https://pastly.chipslays.ru) API.
 
+> **Pastly** - The sexiest pastebin in the Internet.
+
 ## Installation
 
 ```bash
@@ -36,7 +38,7 @@ $client->edit($token, 'example-slug', ['title' => 'New Title']);
 pastly_edit($token, 'example-slug', ['title' => 'New Title']);
 ```
 
-More can see in [examples](/examples/) folder.
+More code can see in [examples](/examples/) folder.
 
 ## Examples
 
