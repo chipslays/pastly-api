@@ -1,7 +1,7 @@
 <?php
 
 use Pastly\Client;
-use Pastly\Types\Expiration;
+use Pastly\Expiration;
 
 require __DIR__ . '/../vendor/autoload.php';
 

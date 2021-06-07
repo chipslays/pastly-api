@@ -1,6 +1,6 @@
 <?php
 
-namespace Pastly\Types;
+namespace Pastly;
 
 /**
  * This a helper class for set expiration for new paste.
