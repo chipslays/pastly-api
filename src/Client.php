@@ -16,7 +16,7 @@ class Client
      *
      * @var string
      */
-    private const BASE_URI ='https://pastly.chipslays.ru/api/v1/';
+    private const BASE_URI = 'https://pastly.chipslays.ru/api/v1/';
 
     /**
      * @var GuzzleHttpClient
