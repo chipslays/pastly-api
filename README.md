@@ -33,8 +33,17 @@ $client->create($token, 'Hello, world!');
 pastly_create($token, 'Hello, world!');
 
 /** edit paste */
-$client->edit($token, 'example-slug', ['title' => 'New Title']);
-pastly_edit($token, 'example-slug', ['title' => 'New Title']);
+$client->edit($token, 'example-slug', [
+    'title' => 'New Title', 
+    'syntax' => 'diff',
+    'text' => "this text\n-was edited\n+successful",
+]);
+
+pastly_edit($token, 'example-slug', [
+    'title' => 'New Title', 
+    'syntax' => 'diff',
+    'text' => "this text\n-was edited\n+successful",
+]);
 ```
 
 More code can see in [examples](/examples/) folder.
