@@ -25,8 +25,10 @@ $client = new Client;
 $token = '1622233044:6bCVU-8OI9fjtk3gXhZRJkzQeDGsJNKti2MuBM_n9V';
 
 /** get paste */
-$client->get('example-slug');
-pastly_get('example-slug');
+$paste = $client->get('example-slug');
+$paste = pastly_get('example-slug');
+
+echo $paste->getText();
 
 /** create paste */
 $client->create($token, 'Hello, world!');
